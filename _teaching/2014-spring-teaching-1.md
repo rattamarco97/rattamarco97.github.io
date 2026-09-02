@@ -9,13 +9,3 @@ location: "Torino, Italy"
 ---
 
 I served for as teaching assistant for the course in academic year 2022/2023 and 2023/2024 (15 hours / course) 
-
-
-Heading 1
-======
-
-Heading 2
-======
-
-Heading 3
-======
