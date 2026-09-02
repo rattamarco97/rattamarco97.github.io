@@ -1,14 +1,15 @@
 ---
-title: "Teaching experience 1"
+title: "Statistics"
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
-date: 2014-01-01
-location: "City, Country"
+permalink: https://didattica.polito.it/pls/portal30/gap.pkg_guide.viewGap?p_cod_ins=11CKRYS&p_a_acc=2027&p_header=S&p_lang=IT&multi=N
+venue: "Politecnico di Torino, Department"
+date: 2023-03-01
+location: "Torino, Italy"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+I served for as teaching assistant for the course in academic year 2022/2023 and 2023/2024 (15 hours / course) 
+
 
 Heading 1
 ======
