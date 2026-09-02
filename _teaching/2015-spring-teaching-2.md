@@ -1,20 +1,11 @@
 ---
-title: "Teaching experience 2"
+title: "Mathematical Analysis 2"
 collection: teaching
 type: "Workshop"
-permalink: /teaching/2015-spring-teaching-1
-venue: "University 1, Department"
-date: 2015-01-01
-location: "City, Country"
+permalink: https://didattica.polito.it/pls/portal30/gap.pkg_guide.viewGap?p_cod_ins=23ACIXV&p_a_acc=2027&p_header=S&p_lang=IT&multi=N
+venue: Politecnico di Torino"
+date: 2024-10-01
+location: "Torino, Italy"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
-
-Heading 1
-======
-
-Heading 2
-======
-
-Heading 3
-======
+Served as teaching assistant, for a total amount of 20 hours.
