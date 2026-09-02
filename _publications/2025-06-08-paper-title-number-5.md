@@ -7,7 +7,5 @@ excerpt: 'Robust Mixture Prior (RMP) is a popular Bayesian dynamic borrowing met
 date: 2026-05-30
 venue: 'Statistics in Medicine'
 paperurl: 'https://onlinelibrary.wiley.com/doi/full/10.1002/sim.70616'
-citation: 'M. Ratta, G. Saint-Hilary, M. Gasparini, and P. Mozgunov, “ On the Interplay Between Prior Weight and Variance of the Robustification Component in Robust Mixture Prior Bayesian Dynamic Borrowing Approach,” Statistics in Medicine 45, no. 13-14 (2026): e70616, https://doi.org/10.1002/sim.70616.'
+citation: 'M. Ratta, G. Saint-Hilary, M. Gasparini, and P. Mozgunov, On the Interplay Between Prior Weight and Variance of the Robustification Component in Robust Mixture Prior Bayesian Dynamic Borrowing Approach, Statistics in Medicine 45, no. 13-14 (2026): e70616, https://doi.org/10.1002/sim.70616.'
 ---
-
-Using [MathJax](https://www.mathjax.org/) in the description is supported - $$E=mc^2$$ - however, the use must be mindful that the default delimiters are `$$...$$` and `\\[...\\]` which differs from the `$...$` that is typically expected.
