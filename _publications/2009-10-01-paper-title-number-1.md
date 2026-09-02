@@ -3,7 +3,7 @@ title: "From populations to networks: Relating diversity indices and frustration
 collection: publications
 category: manuscripts
 permalink: 'https://academic.oup.com/pnasnexus/article/3/2/pgae046/7599722'
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
+excerpt: 'Diversity indices of quadratic type, such as fractionalization and Simpson index, are measures of heterogeneity in a population. Even though they are univariate, they have an intrinsic bivariate interpretation as encounters among the elements of the population. In the paper, it is shown that this leads naturally to associate populations to weakly balanced signed networks. In particular, the frustration of such signed networks is shown to be related to fractionalization by a closed-form expression. This expression allows to simplify drastically the calculation of frustration for weakly balanced signed graphs.'
 date: 2024-02-01
 venue: 'PNAS Nexus'
 slidesurl: 'https://academicpages.github.io/files/slides1.pdf'
