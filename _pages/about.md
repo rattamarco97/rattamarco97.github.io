@@ -54,7 +54,3 @@ I am currently particularly interested in:
 - multi-endpoint and benefit–risk decision-making;
 - efficient statistical inference after data-driven selection;
 - the integration of internal and external sources of evidence.
-
-I am always interested in discussing potential research collaborations and methodological problems related to clinical trial design and statistical decision-making.
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
