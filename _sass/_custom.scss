@@ -149,7 +149,8 @@ html[data-theme="dark"] {
 
 /* ---------- Page titles and headings ---------- */
 
-.page__title {
+.page__title,
+.archive > h1.page__title {
   color: var(--mr-title);
   font-weight: 700;
 }
