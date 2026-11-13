@@ -1,69 +1,72 @@
 /* ==========================================================================
-   CUSTOM STYLE - Marco Ratta
-   Colourful layer on top of the default Academic Pages theme.
+   CUSTOM STYLE - Marco Ratta  (palette: bordeaux and gold)
+   Layer on top of the default Academic Pages theme.
    To go back to the original look, remove "custom" from assets/css/main.scss
    ========================================================================== */
 
 :root {
-  --mr-indigo      : #3b3fb6;
-  --mr-teal        : #0f9d8f;
-  --mr-coral       : #f0645a;
-  --mr-amber       : #f2a93b;
-  --mr-gradient    : linear-gradient(110deg, #3b3fb6 0%, #2d6fc4 45%, #0f9d8f 100%);
+  --mr-main        : #7a1f3d;
+  --mr-main-dark   : #5e1730;
+  --mr-gold        : #b88a2f;
   --mr-card-bg     : #ffffff;
-  --mr-card-shadow : 0 2px 10px rgba(40, 45, 110, 0.08);
-  --mr-tint        : #eef0fb;
+  --mr-card-shadow : 0 1px 6px rgba(80, 30, 45, 0.08);
+  --mr-tint        : #f3e3e7;
+  --mr-tint-text   : #5e1730;
+  --mr-header      : #7a1f3d;
+  --mr-title       : #7a1f3d;
 
-  --global-base-color                : #3b3fb6;
-  --global-bg-color                  : #f6f7fc;
-  --global-footer-bg-color           : #23265e;
-  --global-border-color              : #e1e4f2;
-  --global-link-color                : #2d5fc4;
-  --global-link-color-hover          : #0f9d8f;
-  --global-link-color-visited        : #4b4fc0;
+  --global-base-color                : #7a1f3d;
+  --global-bg-color                  : #fbf9f8;
+  --global-footer-bg-color           : #f1ebe9;
+  --global-border-color              : #e8dfdd;
+  --global-link-color                : #8f2648;
+  --global-link-color-hover          : #5e1730;
+  --global-link-color-visited        : #7a1f3d;
   --global-masthead-link-color       : #ffffff;
-  --global-masthead-link-color-hover : #ffe7a3;
-  --global-text-color                : #2b2f45;
-  --global-text-color-light          : #6b7090;
-  --global-thead-color               : #eef0fb;
+  --global-masthead-link-color-hover : #f0d9a8;
+  --global-text-color                : #2e2a2b;
+  --global-text-color-light          : #6f6567;
+  --global-thead-color               : #f3e3e7;
 }
 
 html[data-theme="dark"] {
-  --mr-card-bg     : #23263a;
-  --mr-card-shadow : 0 2px 10px rgba(0, 0, 0, 0.35);
-  --mr-tint        : #2c3050;
-  --mr-gradient    : linear-gradient(110deg, #2b2e8a 0%, #1f4f99 45%, #0b7a6f 100%);
+  --mr-main        : #e3a0b4;
+  --mr-main-dark   : #f0c3d0;
+  --mr-gold        : #d9b16a;
+  --mr-card-bg     : #2a2124;
+  --mr-card-shadow : 0 1px 6px rgba(0, 0, 0, 0.35);
+  --mr-tint        : #4a2731;
+  --mr-tint-text   : #f3d6de;
+  --mr-header      : #4e1427;
+  --mr-title       : #e8b4c4;
 
-  --global-base-color                : #8f93ff;
-  --global-bg-color                  : #171927;
-  --global-footer-bg-color           : #10121d;
-  --global-border-color              : #34384f;
-  --global-link-color                : #7fb2ff;
-  --global-link-color-hover          : #5fe0cf;
-  --global-link-color-visited        : #a9a2ff;
+  --global-base-color                : #e3a0b4;
+  --global-bg-color                  : #1d1719;
+  --global-footer-bg-color           : #161113;
+  --global-border-color              : #3d3134;
+  --global-link-color                : #eaa9bd;
+  --global-link-color-hover          : #f6d3dd;
+  --global-link-color-visited        : #d993a8;
   --global-masthead-link-color       : #ffffff;
-  --global-masthead-link-color-hover : #ffe7a3;
-  --global-text-color                : #e6e8f2;
-  --global-text-color-light          : #a6abc6;
-  --global-thead-color               : #2c3050;
+  --global-masthead-link-color-hover : #f0d9a8;
+  --global-text-color                : #ece6e7;
+  --global-text-color-light          : #b5a9ac;
+  --global-thead-color               : #4a2731;
 }
 
 /* ---------- Top bar ---------- */
 
 .masthead {
-  background: var(--mr-gradient);
-  border-bottom: none;
-  box-shadow: 0 2px 12px rgba(40, 45, 110, 0.25);
+  background: var(--mr-header);
+  border-bottom: 3px solid var(--mr-gold);
 }
 
 .masthead,
 .greedy-nav {
-  background-color: transparent;
+  background-color: var(--mr-header);
 }
 
 .greedy-nav {
-  background: transparent;
-
   a {
     color: var(--global-masthead-link-color);
     font-weight: 500;
@@ -74,9 +77,8 @@ html[data-theme="dark"] {
   }
 
   .visible-links a:before {
-    background: var(--mr-amber);
+    background: var(--mr-gold);
     height: 3px;
-    border-radius: 2px;
   }
 
   .masthead__menu-item--lg a {
@@ -89,7 +91,7 @@ html[data-theme="dark"] {
   }
 
   button {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.12);
   }
 
   .hidden-links {
@@ -119,26 +121,22 @@ html[data-theme="dark"] {
   height: auto;
   object-fit: cover;
   object-position: center 20%;
-  padding: 4px;
-  border: none;
-  background: var(--mr-gradient);
-  box-shadow: 0 4px 16px rgba(59, 63, 182, 0.25);
+  padding: 3px;
+  border: 3px solid var(--mr-main);
+  background: var(--global-bg-color);
 }
 
 @media (max-width: 1023px) {
   .author__avatar img {
     width: 72px;
-    padding: 3px;
+    padding: 2px;
+    border-width: 2px;
   }
 }
 
 .author__name {
-  color: var(--mr-indigo);
+  color: var(--mr-main);
   font-weight: 700;
-}
-
-html[data-theme="dark"] .author__name {
-  color: #b7b9ff;
 }
 
 .author__bio {
@@ -146,25 +144,14 @@ html[data-theme="dark"] .author__name {
 }
 
 .author__urls a:hover {
-  color: var(--mr-teal);
+  color: var(--mr-main);
 }
 
 /* ---------- Page titles and headings ---------- */
 
 .page__title {
-  display: inline-block;
-  font-weight: 800;
-  background: var(--mr-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: var(--mr-indigo);
-}
-
-html[data-theme="dark"] .page__title {
-  background: linear-gradient(110deg, #a5a8ff 0%, #7fb2ff 45%, #5fe0cf 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
+  color: var(--mr-title);
+  font-weight: 700;
 }
 
 .page__content h1,
@@ -185,10 +172,9 @@ html[data-theme="dark"] .page__title {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 56px;
-  height: 4px;
-  border-radius: 2px;
-  background: linear-gradient(90deg, var(--mr-coral), var(--mr-amber));
+  width: 48px;
+  height: 3px;
+  background: var(--mr-gold);
 }
 
 .archive hr {
@@ -196,15 +182,11 @@ html[data-theme="dark"] .page__title {
 }
 
 .page__content strong {
-  color: var(--mr-indigo);
-}
-
-html[data-theme="dark"] .page__content strong {
-  color: #c3c5ff;
+  color: var(--mr-main);
 }
 
 .page__content ul li::marker {
-  color: var(--mr-teal);
+  color: var(--mr-gold);
 }
 
 /* ---------- Links ---------- */
@@ -224,25 +206,16 @@ html[data-theme="dark"] .page__content strong {
 
 .archive .list__item .archive__item {
   background: var(--mr-card-bg);
-  border-left: 5px solid var(--mr-indigo);
-  border-radius: 10px;
+  border-left: 4px solid var(--mr-main);
+  border-radius: 0 6px 6px 0;
   box-shadow: var(--mr-card-shadow);
-  padding: 1.1em 1.4em 0.6em;
-  margin-bottom: 1.4em;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  padding: 1em 1.4em 0.5em;
+  margin-bottom: 1.3em;
+  transition: box-shadow 0.2s ease-in-out;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(40, 45, 110, 0.14);
+    box-shadow: 0 4px 16px rgba(80, 30, 45, 0.14);
   }
-}
-
-.archive .list__item:nth-of-type(3n+2) .archive__item {
-  border-left-color: var(--mr-teal);
-}
-
-.archive .list__item:nth-of-type(3n+3) .archive__item {
-  border-left-color: var(--mr-coral);
 }
 
 .archive__item-title {
@@ -254,7 +227,7 @@ html[data-theme="dark"] .page__content strong {
   }
 
   a:hover {
-    color: var(--global-link-color);
+    color: var(--mr-main);
   }
 }
 
@@ -267,12 +240,8 @@ html[data-theme="dark"] .page__content strong {
   padding: 0.1em 0.7em;
   border-radius: 999px;
   background: var(--mr-tint);
-  color: var(--mr-indigo);
+  color: var(--mr-tint-text);
   font-weight: 600;
-}
-
-html[data-theme="dark"] .archive .page__meta {
-  color: #c3c5ff;
 }
 
 /* The CV page lists items inside <ul>: keep them compact, no cards */
@@ -283,23 +252,11 @@ html[data-theme="dark"] .archive .page__meta {
   box-shadow: none;
   padding: 0;
   margin-bottom: 0.4em;
-  transform: none;
 }
 
 /* ---------- Footer ---------- */
 
 .page__footer {
   background: var(--global-footer-bg-color);
-  color: #c9cbe8;
-  border-top: 4px solid transparent;
-  border-image: var(--mr-gradient) 1;
-
-  a {
-    color: #ffffff;
-  }
-
-  .page__footer-follow strong,
-  .page__footer-copyright {
-    color: #c9cbe8;
-  }
+  border-top: 3px solid var(--mr-main);
 }
