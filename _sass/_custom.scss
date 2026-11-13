@@ -1,0 +1,305 @@
+/* ==========================================================================
+   CUSTOM STYLE - Marco Ratta
+   Colourful layer on top of the default Academic Pages theme.
+   To go back to the original look, remove "custom" from assets/css/main.scss
+   ========================================================================== */
+
+:root {
+  --mr-indigo      : #3b3fb6;
+  --mr-teal        : #0f9d8f;
+  --mr-coral       : #f0645a;
+  --mr-amber       : #f2a93b;
+  --mr-gradient    : linear-gradient(110deg, #3b3fb6 0%, #2d6fc4 45%, #0f9d8f 100%);
+  --mr-card-bg     : #ffffff;
+  --mr-card-shadow : 0 2px 10px rgba(40, 45, 110, 0.08);
+  --mr-tint        : #eef0fb;
+
+  --global-base-color                : #3b3fb6;
+  --global-bg-color                  : #f6f7fc;
+  --global-footer-bg-color           : #23265e;
+  --global-border-color              : #e1e4f2;
+  --global-link-color                : #2d5fc4;
+  --global-link-color-hover          : #0f9d8f;
+  --global-link-color-visited        : #4b4fc0;
+  --global-masthead-link-color       : #ffffff;
+  --global-masthead-link-color-hover : #ffe7a3;
+  --global-text-color                : #2b2f45;
+  --global-text-color-light          : #6b7090;
+  --global-thead-color               : #eef0fb;
+}
+
+html[data-theme="dark"] {
+  --mr-card-bg     : #23263a;
+  --mr-card-shadow : 0 2px 10px rgba(0, 0, 0, 0.35);
+  --mr-tint        : #2c3050;
+  --mr-gradient    : linear-gradient(110deg, #2b2e8a 0%, #1f4f99 45%, #0b7a6f 100%);
+
+  --global-base-color                : #8f93ff;
+  --global-bg-color                  : #171927;
+  --global-footer-bg-color           : #10121d;
+  --global-border-color              : #34384f;
+  --global-link-color                : #7fb2ff;
+  --global-link-color-hover          : #5fe0cf;
+  --global-link-color-visited        : #a9a2ff;
+  --global-masthead-link-color       : #ffffff;
+  --global-masthead-link-color-hover : #ffe7a3;
+  --global-text-color                : #e6e8f2;
+  --global-text-color-light          : #a6abc6;
+  --global-thead-color               : #2c3050;
+}
+
+/* ---------- Top bar ---------- */
+
+.masthead {
+  background: var(--mr-gradient);
+  border-bottom: none;
+  box-shadow: 0 2px 12px rgba(40, 45, 110, 0.25);
+}
+
+.masthead,
+.greedy-nav {
+  background-color: transparent;
+}
+
+.greedy-nav {
+  background: transparent;
+
+  a {
+    color: var(--global-masthead-link-color);
+    font-weight: 500;
+
+    &:hover {
+      color: var(--global-masthead-link-color-hover);
+    }
+  }
+
+  .visible-links a:before {
+    background: var(--mr-amber);
+    height: 3px;
+    border-radius: 2px;
+  }
+
+  .masthead__menu-item--lg a {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .selected a {
+    color: var(--global-masthead-link-color-hover);
+  }
+
+  button {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .hidden-links {
+    background: var(--mr-card-bg);
+
+    a {
+      color: var(--global-text-color);
+    }
+  }
+}
+
+.greedy-nav .visible-links li,
+.masthead__menu-item {
+  background: transparent !important;
+}
+
+.navicon,
+.navicon:before,
+.navicon:after {
+  background: #ffffff !important;
+}
+
+/* ---------- Sidebar ---------- */
+
+.author__avatar img {
+  aspect-ratio: 1;
+  height: auto;
+  object-fit: cover;
+  object-position: center 20%;
+  padding: 4px;
+  border: none;
+  background: var(--mr-gradient);
+  box-shadow: 0 4px 16px rgba(59, 63, 182, 0.25);
+}
+
+@media (max-width: 1023px) {
+  .author__avatar img {
+    width: 72px;
+    padding: 3px;
+  }
+}
+
+.author__name {
+  color: var(--mr-indigo);
+  font-weight: 700;
+}
+
+html[data-theme="dark"] .author__name {
+  color: #b7b9ff;
+}
+
+.author__bio {
+  color: var(--global-text-color-light);
+}
+
+.author__urls a:hover {
+  color: var(--mr-teal);
+}
+
+/* ---------- Page titles and headings ---------- */
+
+.page__title {
+  display: inline-block;
+  font-weight: 800;
+  background: var(--mr-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--mr-indigo);
+}
+
+html[data-theme="dark"] .page__title {
+  background: linear-gradient(110deg, #a5a8ff 0%, #7fb2ff 45%, #5fe0cf 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.page__content h1,
+.page__content h2,
+.archive > h1,
+.archive h2 {
+  position: relative;
+  border-bottom: none;
+  padding-bottom: 0.35em;
+  color: var(--global-text-color);
+}
+
+.page__content h1:after,
+.page__content h2:after,
+.archive > h1:after,
+.archive > h2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--mr-coral), var(--mr-amber));
+}
+
+.archive hr {
+  display: none;
+}
+
+.page__content strong {
+  color: var(--mr-indigo);
+}
+
+html[data-theme="dark"] .page__content strong {
+  color: #c3c5ff;
+}
+
+.page__content ul li::marker {
+  color: var(--mr-teal);
+}
+
+/* ---------- Links ---------- */
+
+.page__content a,
+.archive a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    border-bottom-color: currentColor;
+  }
+}
+
+/* ---------- Cards for publications, talks and teaching ---------- */
+
+.archive .list__item .archive__item {
+  background: var(--mr-card-bg);
+  border-left: 5px solid var(--mr-indigo);
+  border-radius: 10px;
+  box-shadow: var(--mr-card-shadow);
+  padding: 1.1em 1.4em 0.6em;
+  margin-bottom: 1.4em;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 45, 110, 0.14);
+  }
+}
+
+.archive .list__item:nth-of-type(3n+2) .archive__item {
+  border-left-color: var(--mr-teal);
+}
+
+.archive .list__item:nth-of-type(3n+3) .archive__item {
+  border-left-color: var(--mr-coral);
+}
+
+.archive__item-title {
+  margin-top: 0.2em;
+  line-height: 1.35;
+
+  a {
+    color: var(--global-text-color);
+  }
+
+  a:hover {
+    color: var(--global-link-color);
+  }
+}
+
+.archive__item-excerpt {
+  color: var(--global-text-color-light);
+}
+
+.archive .page__meta {
+  display: inline-block;
+  padding: 0.1em 0.7em;
+  border-radius: 999px;
+  background: var(--mr-tint);
+  color: var(--mr-indigo);
+  font-weight: 600;
+}
+
+html[data-theme="dark"] .archive .page__meta {
+  color: #c3c5ff;
+}
+
+/* The CV page lists items inside <ul>: keep them compact, no cards */
+.page__content .list__item .archive__item,
+.archive ul .list__item .archive__item {
+  background: transparent;
+  border-left: none;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 0.4em;
+  transform: none;
+}
+
+/* ---------- Footer ---------- */
+
+.page__footer {
+  background: var(--global-footer-bg-color);
+  color: #c9cbe8;
+  border-top: 4px solid transparent;
+  border-image: var(--mr-gradient) 1;
+
+  a {
+    color: #ffffff;
+  }
+
+  .page__footer-follow strong,
+  .page__footer-copyright {
+    color: #c9cbe8;
+  }
+}
